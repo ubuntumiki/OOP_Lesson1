@@ -11,8 +11,6 @@ public class Footballer {
     int gamesCount;
     int golCount;
 
-//    public Forward(){}
-
     public Footballer(String surname, String role, int age, int gamesCount, int golCount) {
         this.surname = surname;
         this.role = role;
@@ -38,8 +36,6 @@ public class Footballer {
         Footballer player3 = new Footballer("Zubenko", "goalkeeper", 26, 9, 0);
         Footballer player4 = new Footballer("Shevchenko", "forward", 26, 4, 7);
 
-//        System.out.println(player1);
-
         Footballer[] arrplayer = {player1, player2, player3, player4};
 
         Footballer bestForward = null;
@@ -52,10 +48,7 @@ public class Footballer {
                 }
             }
         }
-
         System.out.println("The best forward is - " + bestForward.surname);
-
-//        System.out.println(arrplayer[0]);
 
         for (int i = 0; i < arrplayer.length; i++) {
             if (arrplayer[i].gamesCount < 5){
