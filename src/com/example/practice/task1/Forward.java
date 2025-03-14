@@ -11,5 +11,17 @@ public class Forward {
     private int gamesCount;
     private int golCount;
 
+//    public Forward(){}
 
+    public Forward(String surname, String role, int age, int gamesCount, int golCount) {
+        this.surname = surname;
+        this.role = role;
+        this.age = age;
+        this.gamesCount = gamesCount;
+        this.golCount = golCount;
+    }
+
+    public static void main(String[] args) {
+        Forward forward1 = new Forward("Popov", "forward", 27, 12, 5);
+    }
 }
