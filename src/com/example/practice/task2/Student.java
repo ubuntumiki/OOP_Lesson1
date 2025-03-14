@@ -59,4 +59,27 @@ public class Student {
     public void setHistory(int history) {
         this.history = history;
     }
+
+    public static void main(String[] args) {
+        Student student1 = new Student("Shevchenko", "9-V", 6, 5, 2);
+        Student student2 = new Student("Venger", "10-V", 5, 1, 3);
+        Student student3 = new Student("Oros", "10-A", 7, 5, 9);
+        Student student4 = new Student("Usyko", "10-V", 10, 12, 11);
+
+        Student[] arrStudent = {student1, student2, student3, student4};
+
+        double averagePoints = 0;
+        for (int i = 0; i < arrStudent.length; i++) {
+            averagePoints = (double) (arrStudent[i].physics + arrStudent[i].informatics + arrStudent[i].history) / 3;
+            System.out.println(arrStudent[i].lastname + " average score is - " + averagePoints);
+        }
+        System.out.println("*".repeat(40));
+
+        for (int i = 0; i < arrStudent.length; i++) {
+            averagePoints = (double) (arrStudent[i].physics + arrStudent[i].informatics + arrStudent[i].history) / 3;
+            if (averagePoints > 4){
+                System.out.println(arrStudent[i].lastname + " has an average score above 4.");
+            }
+        }
+    }
 }
