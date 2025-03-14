@@ -34,7 +34,7 @@ public class Footballer {
 
     public static void main(String[] args) {
         Footballer player1 = new Footballer("Popov", "forward", 27, 7, 5);
-        Footballer player2 = new Footballer("Ivanov", "defender", 25, 10, 1);
+        Footballer player2 = new Footballer("Ivanov", "defender", 25, 3, 1);
         Footballer player3 = new Footballer("Zubenko", "goalkeeper", 26, 9, 0);
         Footballer player4 = new Footballer("Shevchenko", "forward", 26, 4, 7);
 
@@ -56,5 +56,11 @@ public class Footballer {
         System.out.println("The best forward is - " + bestForward.surname);
 
 //        System.out.println(arrplayer[0]);
+
+        for (int i = 0; i < arrplayer.length; i++) {
+            if (arrplayer[i].gamesCount < 5){
+                System.out.println("Player " + arrplayer[i].surname + " played less than 5 games - " + arrplayer[i].gamesCount);
+            }
+        }
     }
 }
